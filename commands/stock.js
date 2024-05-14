@@ -14,22 +14,22 @@ module.exports = {
 
 		const embed = new MessageEmbed()
 			.setColor(config.color.default)
-			.setTitle(`${interaction.guild.name} Service Stock`)
-			.setDescription(`👋 Hello and welcome to **${interaction.guild.name}**! 🌟 We are here to provide you with the best services. 🚀`)
+			.setTitle(`${interaction.guild.name} Servis Stokları`)
+			.setDescription(`👋 Merhaba, **${interaction.guild.name}**'e hoş geldiniz! 🌟 Sizlere en iyi hizmetleri sunmak için buradayız. 🚀`)
 			.setFooter(config.footer)
 			.setImage(config.banner);
 
 		if (freeStock.length > 0) {
 			const freeStockInfo = await getServiceInfo(`${__dirname}/../free/`, freeStock);
-			embed.addField('Free Services', freeStockInfo, true);
+			embed.addField('Ücretsiz Servisler', freeStockInfo, true);
 		}
 
 		if (premiumStock.length > 0) {
 			const premiumStockInfo = await getServiceInfo(`${__dirname}/../premium/`, premiumStock);
-			embed.addField('Premium Services', premiumStockInfo, true);
+			embed.addField('Premium Servisler', premiumStockInfo, true);
 		}
 
-		embed.addField('Useful Links', `[**Website**](${config.website}) [**Discord**](https://dsc.gg/sciencegear)`);
+		embed.addField('Bağlantılar', `[**Discord**](https://discord.gg/VU6rfJ2Mn4)`);
 
 		interaction.reply({ embeds: [embed] });
 	},

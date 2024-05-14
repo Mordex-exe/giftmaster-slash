@@ -25,7 +25,7 @@ module.exports = {
             const wrongChannelEmbed = new MessageEmbed()
                 .setColor(config.color.red)
                 .setTitle('Wrong command usage!')
-                .setDescription(`You cannot use the \`/premium\` command in this channel! Try it in <#${config.premiumChannel}>!`)
+                .setDescription(`**Bu komutu kullanamazsın** \`/premium\` komutunu <#${config.premiumChannel}> kanalında tekrar deneyin!`)
                 .setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true, size: 64 }))
                 .setTimestamp();
 
@@ -88,18 +88,18 @@ module.exports = {
 
                 const embedMessage = new MessageEmbed()
                     .setColor(config.color.green)
-                    .setTitle('Generated Premium account')
+                    .setTitle('Premium Hesabın Oluşturuldu')
                     .setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true, size: 64 }))
-                    .setDescription('🙏 Thank you so much for being a premium member! \n 🌟 Your support means the world to us! 💖😊')
-                    .addField('Service', `\`\`\`${service[0].toUpperCase()}${service.slice(1).toLowerCase()}\`\`\``, true)
-                    .addField('Account', `\`\`\`${generatedAccount}\`\`\``, true)
+                    .setDescription('Premium üyeliğin için teşekkür ederiz 💖')
+                    .addField('Servis', `\`\`\`${service[0].toUpperCase()}${service.slice(1).toLowerCase()}\`\`\``, true)
+                    .addField('Hesap', `\`\`\`${generatedAccount}\`\`\``, true)
                     .setImage(config.banner)
                     .setTimestamp();
 
                 member.send({ embeds: [embedMessage] })
                     .catch(error => console.error(`Error sending embed message: ${error}`));
                 interaction.reply({
-                    content: `**Check your DM ${member}!** __If you do not receive the message, please unlock your private!__`,
+                    content: `**Dm'ni kontrol et ${member}!** __Mesajı almazsanız, lütfen özel mesaj kilidinizi açın.!__`,
                 });
 
                 generated.add(member.id);

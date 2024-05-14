@@ -25,7 +25,7 @@ module.exports = {
             const wrongChannelEmbed = new MessageEmbed()
                 .setColor(config.color.red)
                 .setTitle('Wrong command usage!')
-                .setDescription(`You cannot use the \`/free\` command in this channel! Try it in <#${config.genChannel}>!`)
+                .setDescription(`**Bu komutu kullanamazsın** \`/free\` komutunu <#${config.genChannel}> kanalında tekrar deneyin!`)
                 .setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true, size: 64 }))
                 .setTimestamp();
 
@@ -88,16 +88,16 @@ module.exports = {
 
                 const embedMessage = new MessageEmbed()
                     .setColor(config.color.green)
-                    .setTitle('Generated Free account')
-                    .addField('Service', `\`\`\`${service[0].toUpperCase()}${service.slice(1).toLowerCase()}\`\`\``, true)
-                    .addField('Account', `\`\`\`${generatedAccount}\`\`\``, true)
+                    .setTitle('Hesabın Oluşturuldu')
+                    .addField('Servis', `\`\`\`${service[0].toUpperCase()}${service.slice(1).toLowerCase()}\`\`\``, true)
+                    .addField('Hesap', `\`\`\`${generatedAccount}\`\`\``, true)
                     .setImage(config.banner)
                     .setTimestamp();
 
                 member.send({ embeds: [embedMessage] })
                     .catch(error => console.error(`Error sending embed message: ${error}`));
                 interaction.reply({
-                    content: `**Check your DM ${member}!** __If you do not receive the message, please unlock your private!__`,
+                    content: `**Dm'ni kontrol et ${member}!** __Mesajı almazsanız, lütfen özel mesaj kilidinizi açın.!__`,
                 });
 
                 generated.add(member.id);

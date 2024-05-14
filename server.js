@@ -1415,22 +1415,22 @@ background-color: #0056b3;
     <h2>Bot Commands</h2>
     <ul>
         <li>
-            <strong>/help</strong>: Displays the help command.
+            <strong>/help</strong>: Yardım komutlarını görüntüler.
         </li>
         <li>
-            <strong>/create</strong>: Create a new service.
+            <strong>/create</strong>: Yeni bir servis oluşturur.
         </li>
         <li>
-            <strong>/free</strong>: Generate a reward.
+            <strong>/free</strong>: Ücretsiz bir ödül oluşturur.
         </li>
         <li>
-            <strong>/add</strong>: Add a reward to the stock.
+            <strong>/add</strong>: Stoğa yeni bir ödül ekler.
         </li>
         <li>
-            <strong>/stock</strong>: View the current stock.
+            <strong>/stock</strong>: Mevcut stoğu görüntüler.
         </li>
         <li>
-            <strong>/premium</strong>: Generate a premium reward.
+            <strong>/premium</strong>: Premium bir ödül oluşturur.
         </li>
     </ul>
 </div>
