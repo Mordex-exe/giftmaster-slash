@@ -23,7 +23,7 @@ module.exports = {
 			})
 			.setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true, size: 64 }))
 			.setTimestamp()
-			.addField('Bağlantılar', `[**Discord**](https://discord.gg/VU6rfJ2Mn4)`);
+			.addField('Bağlantılar', `[**Discord**](https://discord.gg/bedavahesaplar)`);
 
 		await interaction.reply({ embeds: [commandListEmbed] });
 	},
