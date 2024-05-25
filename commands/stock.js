@@ -29,7 +29,7 @@ module.exports = {
 			embed.addField('Premium Servisler', premiumStockInfo, true);
 		}
 
-		embed.addField('Bağlantılar', `[**Discord**](https://discord.gg/VU6rfJ2Mn4)`);
+		embed.addField('Bağlantılar', `[**Discord**](https://discord.gg/bedavahesaplar)`);
 
 		interaction.reply({ embeds: [embed] });
 	},
