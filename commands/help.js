@@ -14,7 +14,7 @@ module.exports = {
 		const commandListEmbed = new MessageEmbed()
 			.setColor(config.color.default)
 			.setTitle('Help Panel')
-			.setDescription(`👋 Merhaba, **${interaction.guild.name}**'e hoş geldiniz! 🌟 Sizlere en iyi hizmetleri sunmak için buradayız. 🚀`)
+			.setDescription(`👋 Merhaba, **${interaction.guild.name}**'a hoş geldiniz! 🌟 Sizlere en iyi hizmetleri sunmak için buradayız. 🚀`)
 			.setImage(config.banner)
 			.setThumbnail(interaction.client.user.displayAvatarURL({ dynamic: true, size: 64 })) // Set the bot's avatar as the thumbnail
 			.addFields({
